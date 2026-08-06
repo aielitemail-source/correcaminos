@@ -1,0 +1,36 @@
+﻿name: Deploy to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage site files
+        run: |
+          mkdir -p _site
+          cp -f index.html .nojekyll _site/ 2>/dev/null || true
+          cp -f post-*.html _site/ 2>/dev/null || true
+          cp -f about.html archivo.html _site/ 2>/dev/null || true
+          if [ -d media ]; then cp -r media _site/; fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - uses: actions/deploy-pages@v4
+        id: deployment
