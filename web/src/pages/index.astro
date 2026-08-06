@@ -1,0 +1,56 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import PostCard from '../components/PostCard.astro';
+import fs from 'fs';
+import path from 'path';
+
+const mediaDir = path.join(process.cwd(), 'public/media');
+const posts = [];
+
+if (fs.existsSync(mediaDir)) {
+  const dates = fs.readdirSync(mediaDir).filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d)).sort().reverse();
+  for (const date of dates.slice(0, 12)) {
+    const metaPath = path.join(mediaDir, '../pipeline/output', date, 'metadata.json');
+    if (fs.existsSync(metaPath)) {
+      const meta = JSON.parse(fs.readFileSync(metaPath, 'utf-8'));
+      posts.push(meta);
+    } else {
+      posts.push({ date, title: 'Correcaminos - ' + date });
+    }
+  }
+}
+---
+<BaseLayout title="Correcaminos - Noticias de Corrupción">
+  <Header />
+  <main style="padding: 3rem 0;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <h1 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1;">
+          Correcaminos
+        </h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: 1rem; max-width: 600px; margin-inline: auto;">
+          Contenido diario sobre corrupción, transparencia y accountability.
+        </p>
+      </div>
+      {posts.length > 0 ? (
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem;">
+          {posts.map(post => (
+            <PostCard
+              title={post.title || 'Correcaminos'}
+              date={post.date}
+              video={post.video}
+              image={post.image}
+              excerpt={post.script?.substring(0, 120) + '...'}
+            />
+          ))}
+        </div>
+      ) : (
+        <div style="text-align: center; padding: 4rem 0; color: var(--text-muted);">
+          <p style="font-size: 1.2rem;">Próximamente contenido aquí.</p>
+          <p style="margin-top: 0.5rem;">Ejecuta el pipeline para generar el primer post.</p>
+        </div>
+      )}
+    </div>
+  </main>
+</BaseLayout>

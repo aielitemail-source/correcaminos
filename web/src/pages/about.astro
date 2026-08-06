@@ -1,0 +1,20 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+---
+<BaseLayout title="Acerca de - Correcaminos">
+  <Header />
+  <main style="padding: 3rem 0;">
+    <div class="container" style="max-width: 700px;">
+      <h1 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem;">Acerca de Correcaminos</h1>
+      <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+        Correcaminos es un proyecto automatizado de contenido diario enfocado en temas de corrupción, 
+        transparencia institucional y accountability público.
+      </p>
+      <p style="color: var(--text-muted); line-height: 1.8;">
+        Cada día se genera automáticamente un video corto con análisis del tema principal, 
+        acompañado de imágenes editoriales y contenido para redes sociales.
+      </p>
+    </div>
+  </main>
+</BaseLayout>

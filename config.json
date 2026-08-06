@@ -1,0 +1,23 @@
+{
+  "pipeline": {
+    "name": "correcaminos",
+    "version": "1.0.0",
+    "output_dir": "pipeline/output",
+    "voice": "es-ES-ElviraNeural",
+    "voice_rate": "+0%",
+    "max_duration_seconds": 55
+  },
+  "content": {
+    "themes": [
+      "corrupcion politica",
+      "escandalos publicos",
+      "investigaciones periodisticas",
+      "transparencia governamental"
+    ],
+    "image_style": "editorial illustration, modern, dramatic lighting, professional journalism aesthetic"
+  },
+  "web": {
+    "base_url": "",
+    "posts_per_page": 12
+  }
+}
