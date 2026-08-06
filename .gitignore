@@ -16,3 +16,7 @@ sadtalker/repo/
 test_*.mp3
 test_*.mp4
 test_*.png
+
+site/
+daily.log
+pipeline/daily.log
