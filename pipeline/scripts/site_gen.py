@@ -117,11 +117,11 @@ def build_index(posts):
     hero = """<section class="hero"><div class="container">
 <span class="badge">Edicion diaria</span>
 <h1>Correcaminos</h1>
-<p>Corrupcion, transparencia y rendicion de cuentas. Un video y una serie de imagenes cada dia.</p>
+<p>Patinetes electricos, movilidad personal y regulacion urbana. Un video y imagenes cada dia.</p>
 </div></section>"""
 
-    return (HEAD.format(title="Correcaminos - Corrupcion y transparencia",
-                        desc="Contenido diario sobre corrupcion y transparencia",
+    return (HEAD.format(title="Correcaminos - Patinetes y movilidad",
+                        desc="Contenido diario sobre patinetes electricos y movilidad personal",
                         css=CSS) + hero + body
             + FOOT.format(year=datetime.now().year))
 
@@ -163,7 +163,7 @@ def build_about():
 letter-spacing:-.03em;margin-bottom:1.5rem">Sobre Correcaminos</h1>
 <p style="color:var(--text-muted);font-size:1.02rem;margin-bottom:1rem">
 Correcaminos publica cada dia una pieza corta de video y una serie de imagenes
-sobre corrupcion, transparencia y rendicion de cuentas.</p>
+sobre patinetes electricos, movilidad personal y regulacion urbana.</p>
 <p style="color:var(--text-muted);font-size:1.02rem">
 Todo el contenido se genera y publica de forma automatica mediante un pipeline
 local: sintesis de voz, generacion de imagenes y montaje de video.</p>

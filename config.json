@@ -9,12 +9,12 @@
   },
   "content": {
     "themes": [
-      "corrupcion politica",
-      "escandalos publicos",
-      "investigaciones periodisticas",
-      "transparencia governamental"
+      "patinetes electricos",
+      "vehiculos de movilidad personal",
+      "regulacion urbana de patinetes",
+      "seguridad vial y micromovilidad"
     ],
-    "image_style": "editorial illustration, modern, dramatic lighting, professional journalism aesthetic"
+    "image_style": "urban photography, modern cityscape, street level, editorial documentary style"
   },
   "web": {
     "base_url": "",

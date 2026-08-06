@@ -1,0 +1,17 @@
+[
+  {
+    "date": "2026-08-06",
+    "title": "Correcaminos - Patinetes electricos y movilidad personal",
+    "theme": "patinetes electricos",
+    "script": "Bienvenidos a Correcaminos. Hoy hablamos de patinetes electricos y vehiculos de movilidad personal. Un sector que crece como la espuma, pero que sigue sin una regulacion clara en muchas ciudades españolas. Primero, los datos: en España hay mas de un millon de patinetes electricos matriculados. Pero solo una fraccion estan asegurados. Las lesiones por accidentes con patinetes han subido un cuarenta por ciento en el ultimo año. Segundo, el marco legal. La DGT permite patinetes hasta cuarenta kilometros por hora en vias urbanas, pero los ayuntamientos pueden restringir su uso en aceras y zonas peatonales. El problema es que cada ciudad hace lo que le da la gana. Madrid, Barcelona y Valencia tienen normativas diferentes. Tercero, la infraestructura. Faltan carriles bici, aparcamientos seguros y puntos de carga. Los patinetes se apilan en las esquinas y se convierten en obstaculos para peatones. La movilidad personal es el futuro, pero sin reglas claras estamos jugando al bingo. Seguiremos investigando. Esto es Correcaminos.",
+    "video": "media/2026-08-06/final_video.mp4",
+    "cover": "media/2026-08-06/cover.png",
+    "images": [
+      "media/2026-08-06/scene_01.png",
+      "media/2026-08-06/scene_02.png",
+      "media/2026-08-06/scene_03.png",
+      "media/2026-08-06/scene_04.png"
+    ],
+    "duration": 30.0
+  }
+]
